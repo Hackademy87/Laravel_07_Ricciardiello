@@ -92,12 +92,18 @@ c-14 -7 -36 -16 -50 -20 -14 -3 -7 3 15 14 45 22 74 27 35 6z m3699 -1623 c62
 background: linear-gradient(90deg, rgba(4,4,4,0.8688725490196079) 0%, rgba(0,0,0,0.6615896358543417) 40%, rgba(0,0,0,0.70640756302521) 100%); -webkit-background-clip: text; color: transparent;">Index Shop</h1>
 </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('home')}}">HOME</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{{route('product.create')}}">CREA PRODOTTI</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('product.index')}}">STORE</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{{route('admin.dashboard')}}">AMMINISTRATORE</a>
         </li>

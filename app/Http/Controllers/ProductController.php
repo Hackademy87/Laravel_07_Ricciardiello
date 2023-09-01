@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
+public function welcome(){
+    return view('welcome');
+}
+
+
+
+
 // CREA LISTA DEL FORM
 
 public function create(){
@@ -90,7 +97,7 @@ public function edit(Product $product){
     
         
     }
-    return redirect()->route('product.index')->with('message',"il prodotto $product->name è stato modificato correttamente!");
+    return redirect()->route('admin.dashboard')->with('message',"il prodotto $product->name è stato modificato correttamente!");
     
     }
 
@@ -100,7 +107,7 @@ public function edit(Product $product){
     public function destroy(Product $product){
         $product->delete();
         
-        return redirect()->route('product.index');
+        return redirect()->route('admin.dashboard');
         
         
         }
