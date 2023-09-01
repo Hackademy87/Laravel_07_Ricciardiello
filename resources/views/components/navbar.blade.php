@@ -98,6 +98,9 @@ background: linear-gradient(90deg, rgba(4,4,4,0.8688725490196079) 0%, rgba(0,0,0
         <li class="nav-item">
           <a class="nav-link" href="{{route('product.index')}}">STORE</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('admin.dashboard')}}">AMMINISTRATORE</a>
+        </li>
 
 
         <li class="nav-item dropdown">
@@ -105,9 +108,9 @@ background: linear-gradient(90deg, rgba(4,4,4,0.8688725490196079) 0%, rgba(0,0,0
             Categorie
           </a>
           <ul class="dropdown-menu">
-        
-            <li><a class="dropdown-item" href=""></a></li>
-           
+        @foreach($categoryProduct as $category)
+            <li><a class="dropdown-item" href="">{{$category}}</a></li>
+           @endforeach
       </ul>
       </div>
   </div>

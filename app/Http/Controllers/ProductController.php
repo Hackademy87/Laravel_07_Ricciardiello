@@ -39,5 +39,74 @@ public function index(){
 
 
 
+//MOSTRA DETTAGLI PRODOTTO
+
+
+    public function show(Product $product){
+
+        return view('products.show',compact('product'));
+    
 
 }
+
+
+
+
+//MOSTRA PAGINA MODIFICA PRODOTTO
+
+
+public function edit(Product $product){
+
+    return view('products.edit',compact('product'));
+    
+    
+    }
+
+
+
+//MODIFICA IL PRODOTTO E AGGIORNA LE CARD
+
+
+    public function updates(Product $product , Request $request){
+
+        $product->update([
+        $product->name = $request->name,
+        $product->category = $request->category,
+        $product->gender = $request->gender,
+        $product->price = $request->price,
+    
+    
+    
+        ]);
+    
+// PER GESTIRE L IMMAGINE
+
+
+    if($request->img){
+        $product->update ([
+            $product->img = $request->file('img')->store('public/product')
+    
+        ]);
+    
+        
+    }
+    return redirect()->route('product.index')->with('message',"il prodotto $product->name è stato modificato correttamente!");
+    
+    }
+
+    //CANCELLARE CARD
+
+
+    public function destroy(Product $product){
+        $product->delete();
+        
+        return redirect()->route('product.index');
+        
+        
+        }
+        
+}
+
+
+
+
