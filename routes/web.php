@@ -38,3 +38,5 @@ Route::get('/contatti',[ContactController::class,'contact'])->name('contatti');
 
 Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('contatti.nuovo');
 
+//CATEGORIE INCOMPLETO
+Route::get('/product/category/{product}',[ProductController::class,'filterCategory'])->name('product.category');

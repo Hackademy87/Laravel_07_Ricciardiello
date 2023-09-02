@@ -42,7 +42,9 @@ public function store(Request $request){
 
 public function index(){
     $products = Product::oldest()->get();
-    return view('products.index', compact('products'));
+    $productsMan=Product::where('gender', 'uomo')->get();
+    $productsWoman=Product::where('gender', 'donna')->get();
+    return view('products.index', compact('products','productsMan','productsWoman'));
 }
 
 
@@ -56,7 +58,13 @@ public function index(){
     
 
 }
+ 
+//MOSTRA PER CATEGORIE
 
+public function filterCategory(Product $categorySelected){
+    $productsCategory = Product::where('category','categorySelected')->get();
+    return view('products.category',compact('productsCategory'));
+}
 
 
 

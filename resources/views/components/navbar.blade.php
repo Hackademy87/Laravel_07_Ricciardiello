@@ -117,7 +117,7 @@ background: linear-gradient(90deg, rgba(4,4,4,0.8688725490196079) 0%, rgba(0,0,0
           </a>
           <ul class="dropdown-menu">
         @foreach($categoryProduct as $category)
-            <li><a class="dropdown-item" href="">{{$category}}</a></li>
+            <li><a class="dropdown-item" href="{{route('product.category',$category)}}">{{$category}}</a></li>
            @endforeach
       </ul>
 
