@@ -107,7 +107,9 @@ background: linear-gradient(90deg, rgba(4,4,4,0.8688725490196079) 0%, rgba(0,0,0
         <li class="nav-item">
           <a class="nav-link" href="{{route('admin.dashboard')}}">AMMINISTRATORE</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('contatti')}}">ASSISTENZA</a>
+        </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

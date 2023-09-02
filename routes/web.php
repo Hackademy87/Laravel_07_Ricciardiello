@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -32,3 +33,8 @@ Route::put('/product/update/{product}',[ProductController::class,'updates'])->na
 Route::delete('/product/delete/{product}',[ProductController::class,'destroy'])->name('product.delete');
 
 Route::get('/admin',[AdminController::class,'dashboard'])->name('admin.dashboard');
+
+Route::get('/contatti',[ContactController::class,'contact'])->name('contatti');
+
+Route::post('/contatti/nuovo',[ContactController::class,'newContact'])->name('contatti.nuovo');
+
